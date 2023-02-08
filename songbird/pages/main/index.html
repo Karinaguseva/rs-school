@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../../assets/images/logo-bird.png" rel="shortcut icon">
+  <link rel="stylesheet" href="../../assets/styles/normalize.css">
+  <link rel="stylesheet" href="../../assets/styles/common_styles.css">
+  <link rel="stylesheet" href="../../assets/styles/header-footer_style.css">
+  <link rel="stylesheet" href="./style.css">
+  <title>Songbird main</title>
+</head>
+<body class="body">
+  <div class="dark__wrapper"></div>
+  <header class="header">
+    <div class="header__container container">
+      <div class="header__logo logo">
+        <a href="../main/index.html" class="logo__link">
+          <p class="logo__text text">
+            <span class="text__first-part">Song</span><span class="text__second-part">bird</span>
+          </p>
+          <img class="logo__img" src="../../assets/images/logo-bird.png" alt="Parrot">
+        </a>
+      </div>
+      <div class="header__burger burger">
+        <span class="burger__line burger__line_first"></span>
+        <span class="burger__line burger__line_second"></span>
+        <span class="burger__line burger__line_third"></span>
+      </div>
+      <nav class="header__nav nav">
+        <ul class="nav__list list">
+          <li class="list__item item">
+            <a class="item__link" href="../main/index.html"></a>
+          </li>
+          <li class="list__item item">
+            <a class="item__link" href="../quiz/index.html"></a>
+          </li>
+          <li class="list__item item">
+            <a class="item__link" href="../gallery/index.html"></a>
+          </li>
+        </ul>
+        <div class="nav__close">
+          <span class="nav__close_line"></span>
+          <span class="nav__close_line"></span>
+        </div>
+      </nav>
+      <button class="header__language"></button>
+    </div>
+  </header>
+<!-- END header -->
+  <main class="main">
+    <div class="main__slider slider">
+      <button class="slider__icon slider__icon_prev"></button>
+      <button class="slider__icon slider__icon_next"></button>
+    </div>
+    <div class="main__time"></div>
+    <div class="main__date"></div>
+    <div class="main__greeting">
+      <p class="greeting__text"></p>
+    </div>
+  </main>
+<!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container container">
+      <div class="footer__info info">
+        <a class="info__github" href="https://github.com/Karinaguseva" target="_blank">KarinaGuseva</a>
+        <p class="info__year">2022</p>
+        <a class="info__link" href="https://rs.school/js/" target="_blank">
+          <img class="info__logo" src="../../assets/images/rs_school_js.svg" alt="Rss">
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="../../data/burger.js"></script>
+  <script type="module" src="./index.js"></script>
+</body>
+</html>
