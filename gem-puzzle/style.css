@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&display=swap');
+
+
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*, *::after, *::before{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0 auto;
+    max-width: 1280px;
+    user-select: none;/**/
+    font-family: 'Fuzzy Bubbles', cursive;
+}
+
+p{
+    margin: 0;
+}
+
+.setting-button{
+    text-transform: capitalize;
+    background-color: rgb(25, 133, 34);
+    color: white;
+    padding: 5px 6px;
+    margin: 0;
+    border: 0;
+    border-radius: 5px;
+    font-family: 'Fuzzy Bubbles', cursive;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.setting-button:hover{
+    opacity: 0.7;
+}
+
+.setting-button:active{
+    opacity: 0.7;
+    background-color: rgb(19, 221, 211);
+}
+
+.dark-wrapper{
+    width: 100%;
+    height: 110%;
+    background-size: cover;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-300%);
+}
+
+.win-wrapper{
+    position: absolute;
+    z-index: 2;
+    top: 25%;
+    left: 25%;
+    height: 25%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: rgb(25, 133, 34);
+    transform: translateY(-300%);
+    transition: 0.3s all linear;
+    padding: 5px;
+}
+
+.result-wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% ;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transform: translateY(-100%);
+    transition: 0.3s all linear;  
+}
+
+table{
+    width: 288px;
+    color: white;
+    background-color: rgb(25, 133, 34);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+thead{
+    width: 100%;
+}
+
+tbody{
+    width: 100%;
+}
+
+tr{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.win-text{
+    color: white;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.win-active{
+    transform: translateY(0);
+}
+
+.win-button{
+    color: white;
+    border: 1px solid rgb(255, 251, 22);
+    padding: 5px;
+}
+
+.win-button:hover{
+    color: rgb(255, 251, 22);
+    cursor: pointer;
+}
+
+
+#game-container{
+    max-width: 500px;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+
+.wrapper{
+    display: inline-block;
+    width: 100%;
+    padding-bottom: 100%;
+    background: #6e6e6e;
+    margin: 0 0 1rem 0;
+    position: relative; 
+}
+
+.wrapper.wrapper3 .item{
+    width: 33.3%;
+    padding-bottom: calc(33.3% - 2px);
+  }
+  .wrapper.wrapper4 .item{
+    width: 25%;
+    padding-bottom: calc(25% - 2px);
+  }
+  .wrapper.wrapper5 .item{
+    width: 19.98%;
+    padding-bottom: calc(19.98% - 2px);
+  }
+  .wrapper.wrapper6 .item{
+    width: 16.65%;
+    padding-bottom: calc(16.65% - 2px);
+  }
+
+  .wrapper.wrapper7 .item{
+    width: 14.27%;
+    padding-bottom: calc(14.27% - 2px);
+  }
+  .wrapper.wrapper8 .item{
+    width: 12.5%;
+    padding-bottom: calc(12.5% - 2px);
+  }
+
+  .wrapper.wrapper4 .item[data-matrix-id="16"], 
+  .wrapper.wrapper3 .item[data-matrix-id="9"],
+  .wrapper.wrapper5 .item[data-matrix-id="25"],
+  .wrapper.wrapper6 .item[data-matrix-id="36"],
+  .wrapper.wrapper7 .item[data-matrix-id="49"],
+  .wrapper.wrapper8 .item[data-matrix-id="64"]{
+    opacity: 0;
+  }
+  
+  .item span{
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 25px;
+  }
+
+.item{
+    position: absolute;
+    transition-duration: 0.2s, 0.5s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+    border: 1px solid #6e6e6e;
+    border-radius: 5px;
+    background-color: rgb(19, 221, 211);
+}
+
+
+.sound{
+    background: url("./assets/volumeOn.svg");
+    background-repeat: no-repeat;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+.wrapper-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.sizes{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.size{
+    display: block;
+    cursor: pointer;
+}
+
+.size:hover{
+    color: rgb(25, 133, 34);
+    text-decoration: underline;
+}
+
+
+.hide{
+    display: none;
+}
+
+
+.bottom-sets{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.mouse-over{
+    cursor: pointer;
+}
+
+#minute{
+    display: inline-block;
+    width: 25px;
+}
+
+#second{
+    display: inline-block;
+    width: 25px;
+}
+
+.moove-count{
+    display: inline-block;
+    width: 50px;
+}
